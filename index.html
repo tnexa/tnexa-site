@@ -69,19 +69,21 @@
       asks the questions a good product team would ask, before a single line of code exists.</p>
 
     <h2>How it works</h2>
-    <p>The pipeline runs in seven stages. Each stage interviews the founder or product owner and hands a
-      checked result to the next.</p>
+    <p>The pipeline runs in nine steps. Claude does the work of each step; the founder makes one decision and
+      the result becomes the next step's input.</p>
     <ol class="stages" id="stages">
-      <li data-n="S0"><div><b>Raw idea → candidate goals</b><small>What would success look like, and how would you know?</small></div></li>
-      <li data-n="S1"><div><b>Map the chosen goal</b><small>Actors, the change in their behaviour, and what could deliver it.</small></div></li>
-      <li data-n="S2"><div><b>Journey and stories</b><small>The user journey, cut into stories.</small></div></li>
-      <li data-n="S3"><div><b>Refine the story</b><small>Size, split and slice by user value.</small></div></li>
-      <li data-n="S4"><div><b>Discover the requirements</b><small>Business rules and concrete examples.</small></div></li>
-      <li data-n="S5"><div><b>Acceptance tests</b><small>Each story written out as executable behaviour.</small></div></li>
-      <li data-n="S6"><div><b>Use cases and domain model</b><small>The specification and the test structure TDD starts from.</small></div></li>
+      <li data-n="1"><div><b>Clarify intent</b><small>Claude interviews the raw idea and proposes candidate goals. You pick one.</small></div></li>
+      <li data-n="2"><div><b>Impact map</b><small>Who can help or block the goal, and how their behaviour must change.</small></div></li>
+      <li data-n="3"><div><b>Choose slice</b><small>The deliverable cut into user stories, sliced by user value.</small></div></li>
+      <li data-n="4"><div><b>Example mapping</b><small>Rules, concrete examples and open questions for one story.</small></div></li>
+      <li data-n="5"><div><b>Formulation</b><small>The story written out as a BDD narrative and scenarios.</small></div></li>
+      <li data-n="6"><div><b>Use case</b><small>The primary course and every failure path.</small></div></li>
+      <li data-n="7"><div><b>Model and contract</b><small>Model fields, payload contract and error types.</small></div></li>
+      <li data-n="8"><div><b>Component boundaries</b><small>Domain, API, presentation and composition, separated.</small></div></li>
+      <li data-n="9"><div><b>Test structure</b><small>Test classes, test names, test doubles and helpers: where TDD starts.</small></div></li>
     </ol>
-    <p style="margin-top:18px">It stops at design. The output is a specification and a set of failing tests,
-      ready for a developer or an AI agent to make pass.</p>
+    <p style="margin-top:18px">It stops at design. The output is a specification and a test structure, ready for Claude Code or a
+      developer to implement test-first.</p>
 
     <h2>Principles</h2>
     <div class="grid">
