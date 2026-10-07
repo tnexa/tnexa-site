@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sample run — TNExa</title>
+<meta name="description" content="A real run of BDDtoTDD's first step on Claude: one raw idea in, eight candidate goals out.">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="logo" href="/" style="color:inherit">TN<span>Exa</span></a>
+    <a href="mailto:admin@tnexa.org">admin@tnexa.org</a>
+  </header>
+
+  <main>
+    <h1>Sample run: step 1 on our own idea</h1>
+    <p class="lead">The first step of BDDtoTDD turns a raw idea into candidate goals, each with a plain
+      statement of what success would mean. We ran it with Claude on the idea behind BDDtoTDD itself.</p>
+    <span class="status">Run on 2026-08-14 · 13 turns · finished</span>
+
+    <h2>In</h2>
+    <p>The idea, as the founder typed it:</p>
+    <blockquote>An app that takes a raw idea for an app, one or more features, or a framework, and produces
+      BDD specs + use cases + the test structure for TDD.</blockquote>
+    <p>That sentence names a solution, not a problem. So Claude does not start from the list of things to
+      build. It asks why, one level at a time, until it reaches the pain underneath.</p>
+
+    <h2>Asking why, from the solution down to the pain</h2>
+    <ul class="ladder">
+      <li>Produce BDD specs, use cases and a test structure</li>
+      <li>Reached for BDD, but does not know how to derive it</li>
+      <li>Does not know whether the behaviour is covered</li>
+      <li>TDD has no starting point: deciding what to test next is guesswork</li>
+      <li>Notes written alone come out missing rules and scenarios</li>
+      <li>Works solo, with nobody to push back</li>
+    </ul>
+    <p>The deepest harm the founder named: <b>false confidence</b>, a green test suite that covers lines of
+      code but not the behaviour.</p>
+
+    <h2>Out: eight candidate goals</h2>
+    <p>Each goal is a pain plus a statement of success the founder can check. Step 1 chooses nothing: the
+      founder picks which goal goes on to step 2.</p>
+    <div class="table-scroll">
+    <table>
+      <tr><th></th><th>The pain</th><th>Success means</th></tr>
+      <tr><td class="n">1</td><td>Starting TDD means inventing the next test yourself</td><td>Open the spec and the first test, and the order of the rest reads straight off it</td></tr>
+      <tr><td class="n">2</td><td>A green suite that only covers lines of code</td><td>Every behaviour and edge case in the spec has a test pointing at it; green means those behaviours hold</td></tr>
+      <tr><td class="n">3</td><td>Months later, no idea what the system does</td><td>Read a feature's documentation and say what it does and where it breaks, without opening the code</td></tr>
+      <tr><td class="n">4</td><td>Blank-file paralysis</td><td>Sitting down to write, the shape of the first scenario is already there</td></tr>
+      <tr><td class="n">5</td><td>Specs that turn into click-by-click scripts</td><td>No UI steps; one rule per scenario; business words, not technical ones</td></tr>
+      <tr><td class="n">6</td><td>Spec in one place, tests in another</td><td>Every spec item names its test, and editing a spec item tells you which test must change</td></tr>
+      <tr><td class="n">7</td><td>Tests bound to the code rather than the system</td><td>A description of what the system does exists, and every test traces to a step or an error path in it</td></tr>
+      <tr><td class="n">8</td><td>No idea which story belongs to which feature</td><td>Given two stories, say whether they belong to the same feature and state the criterion</td></tr>
+    </table>
+    </div>
+
+    <h2>How the list was reached</h2>
+    <p>Claude keeps asking until two quiet turns in a row, each from a different angle. Three turns changed
+      the result in ways a single pass would have missed:</p>
+    <div class="table-scroll">
+    <table>
+      <tr><th>Turn</th><th>Angle</th><th>What changed</th></tr>
+      <tr><td class="n">1</td><td>Discuss the pain</td><td>Seven goals proposed</td></tr>
+      <tr><td class="n">3</td><td>Check against what the idea named</td><td>One goal split in two</td></tr>
+      <tr><td class="n">9</td><td>Challenge: is each one a pain of its own?</td><td>One goal removed: it was a consequence of two others</td></tr>
+      <tr><td class="n">10–11</td><td>Rewrite the list so the founder can read it</td><td>A new goal surfaced (goal 8)</td></tr>
+      <tr><td class="n">12–13</td><td>Scan for gaps; then: any lost day in the last three months this list cannot name?</td><td>Nothing new: the founder declared it enough for now</td></tr>
+    </table>
+    </div>
+    <p>The challenge at turn 9 is the point: the list got shorter, not longer. The tool is built to keep
+      only what a question earned.</p>
+
+    <p class="note">This run used the step-1 rules as they stood on 2026-08-14. Running it, and the runs
+      after it, changed several of those rules; the current version reads the founder's own list first
+      and returns the goals as a tiered tree.</p>
+
+    <p><a href="/">← Back to TNExa</a></p>
+  </main>
+
+  <footer>© 2026 TNExa · Vietnam</footer>
+</div>
+</body>
+</html>

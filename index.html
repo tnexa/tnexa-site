@@ -5,47 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>TNExa — from idea to acceptance tests</title>
 <meta name="description" content="TNExa builds BDDtoTDD: a Claude-powered pipeline that turns a raw product idea into a behaviour specification and the acceptance tests an AI coding agent implements test-first.">
-<style>
-  :root {
-    --bg: #fbfaf7; --fg: #1d1d1b; --muted: #5f5e58; --line: #e4e1d8;
-    --accent: #b5532a; --card: #ffffff;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root { --bg: #161614; --fg: #ecebe6; --muted: #a3a29a; --line: #2e2d29; --accent: #e08a5f; --card: #1e1e1b; }
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0; background: var(--bg); color: var(--fg);
-    font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  }
-  .wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
-  header { padding: 28px 0; display: flex; justify-content: space-between; align-items: center; }
-  .logo { font-weight: 700; letter-spacing: .02em; }
-  .logo span { color: var(--accent); }
-  header a { color: var(--muted); text-decoration: none; font-size: 15px; }
-  h1 { font-size: clamp(30px, 6vw, 44px); line-height: 1.15; margin: 48px 0 16px; letter-spacing: -.01em; }
-  h2 { font-size: 22px; margin: 64px 0 12px; }
-  p { margin: 0 0 14px; }
-  .lead { font-size: 19px; color: var(--muted); max-width: 40em; }
-  .status {
-    display: inline-block; margin-top: 12px; font-size: 14px; color: var(--muted);
-    border: 1px solid var(--line); border-radius: 999px; padding: 4px 12px;
-  }
-  ol.stages { list-style: none; padding: 0; margin: 20px 0 0; }
-  ol.stages li {
-    display: grid; grid-template-columns: 44px 1fr; gap: 8px;
-    padding: 14px 0; border-top: 1px solid var(--line);
-  }
-  ol.stages li::before { content: attr(data-n); color: var(--accent); font-weight: 600; }
-  ol.stages b { display: block; }
-  ol.stages small { color: var(--muted); font-size: 15px; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; margin-top: 18px; }
-  .card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px; }
-  .card b { display: block; margin-bottom: 4px; }
-  .card p { color: var(--muted); font-size: 15px; margin: 0; }
-  a { color: var(--accent); }
-  footer { margin: 80px 0 40px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
-</style>
+<link rel="stylesheet" href="/style.css">
 </head>
 <body>
 <div class="wrap">
@@ -84,6 +44,8 @@
     </ol>
     <p style="margin-top:18px">It stops at design. The output is a specification and a test structure, ready for Claude Code or a
       developer to implement test-first.</p>
+
+    <p><a href="/sample-run/">See a sample run of the first step →</a></p>
 
     <h2>Principles</h2>
     <div class="grid">
