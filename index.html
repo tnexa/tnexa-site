@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>TNExa — from idea to acceptance tests</title>
-<meta name="description" content="TNExa builds BDDtoTDD: a Claude-powered pipeline that turns a raw product idea into a behaviour specification and the acceptance tests an AI coding agent implements test-first.">
+<title>TNExa — precise software with AI</title>
+<meta name="description" content="TNExa is a one-person software startup in Da Nang, Vietnam, building tools that make AI-assisted software development precise.">
 <link rel="stylesheet" href="/style.css">
 </head>
 <body>
@@ -15,57 +15,50 @@
   </header>
 
   <main>
-    <h1>From a raw idea to the tests that define it.</h1>
-    <p class="lead">TNExa is building <b>BDDtoTDD</b>: a Claude-powered pipeline that turns a product idea into a
-      behaviour specification, a domain model and the acceptance tests an AI coding agent such as Claude Code
-      can then implement test-first.</p>
-    <span class="status">In design · building with Claude</span>
+    <h1>Software built with AI should do exactly what was agreed.</h1>
+    <p class="lead">TNExa is a software startup in Da Nang, Vietnam. We build tools that make AI-assisted
+      software development precise: the behaviour is agreed first, and the code an AI writes is checked
+      against it.</p>
 
-    <h2>The problem</h2>
-    <p>AI coding agents write code fast, but they build what they are told. When the idea behind the request
-      is vague, the agent fills the gaps with guesses: rules go missing, scenarios are never written, and
-      tests arrive after the code instead of before it.</p>
-    <p>A founder working alone has nobody to push back on a half-formed idea. BDDtoTDD plays that role: it
-      asks the questions a good product team would ask, before a single line of code exists.</p>
+    <h2>Vision</h2>
+    <p>AI coding agents now write code faster than people can review it. The bottleneck has moved from
+      writing code to saying precisely what the code should do. A vague request gets a confident guess:
+      missing rules, unwritten edge cases, tests that arrive after the code.</p>
+    <p>We think every line an AI writes should trace back to a behaviour someone agreed to. Our tools put
+      the specification and the tests first, built with the methods software teams already trust —
+      behaviour-driven development, domain-driven design and test-driven development — and they keep a
+      person in charge of every decision.</p>
 
-    <h2>How it works</h2>
-    <p>The pipeline runs in nine steps. Claude does the work of each step; the founder makes one decision and
-      the result becomes the next step's input.</p>
-    <ol class="stages" id="stages">
-      <li data-n="1"><div><b>Clarify intent</b><small>Claude interviews the raw idea and proposes candidate goals. You pick one.</small></div></li>
-      <li data-n="2"><div><b>Impact map</b><small>Who can help or block the goal, and how their behaviour must change.</small></div></li>
-      <li data-n="3"><div><b>Choose slice</b><small>The deliverable cut into user stories, sliced by user value.</small></div></li>
-      <li data-n="4"><div><b>Example mapping</b><small>Rules, concrete examples and open questions for one story.</small></div></li>
-      <li data-n="5"><div><b>Formulation</b><small>The story written out as a BDD narrative and scenarios.</small></div></li>
-      <li data-n="6"><div><b>Use case</b><small>The primary course and every failure path.</small></div></li>
-      <li data-n="7"><div><b>Model and contract</b><small>Model fields, payload contract and error types.</small></div></li>
-      <li data-n="8"><div><b>Component boundaries</b><small>Domain, API, presentation and composition, separated.</small></div></li>
-      <li data-n="9"><div><b>Test structure</b><small>Test classes, test names, test doubles and helpers: where TDD starts.</small></div></li>
-    </ol>
-    <p style="margin-top:18px">It stops at design. The output is a specification and a test structure, ready for Claude Code or a
-      developer to implement test-first.</p>
-
-    <p><a href="/sample-run/">See a sample run of the first step →</a></p>
-
-    <h2>Principles</h2>
+    <h2>Products</h2>
     <div class="grid">
-      <div class="card"><b>Every question has a source</b><p>Each question the tool asks is traced to a published method — impact mapping, story mapping, specification by example, use cases, domain-driven design.</p></div>
-      <div class="card"><b>Improves ideas, never rejects them</b><p>The pipeline sharpens an idea. It is not a gatekeeper.</p></div>
-      <div class="card"><b>Tests before code</b><p>Acceptance tests are the hand-off, so the implementation is checked against what was agreed.</p></div>
+      <div class="card">
+        <b><a href="/bddtotdd/">BDDtoTDD</a></b>
+        <p>A pipeline on Claude that takes a raw product idea to a behaviour specification, a domain model
+          and the test structure a developer or Claude Code implements test-first.</p>
+        <p style="margin-top:10px"><span class="status" style="margin:0">In design · step 1 runs on Claude</span></p>
+      </div>
+      <div class="card">
+        <b>Spec cockpit for macOS</b>
+        <p>A native macOS app that drives Claude Code from idea intake to spec authoring, with a review
+          gate at every stage. BDDtoTDD's method is going into it next.</p>
+        <p style="margin-top:10px"><span class="status" style="margin:0">Prototype · idea intake working</span></p>
+      </div>
     </div>
+    <p style="margin-top:16px"><a href="/sample-run/">See a sample run of BDDtoTDD's first step →</a></p>
 
-    <h2>Where we are</h2>
-    <p>TNExa is a one-person startup, founded in 2026 and not yet incorporated. We first built a native macOS app that drives
-      Claude Code headlessly, from idea intake to spec authoring. Building it showed us that
-      AI-written specs come out bloated, so we went back to the source: the method layer is being rebuilt
-      from the core books on BDD, DDD and TDD, and its first step already runs with Claude on real product
-      ideas. Next, that method goes into the app.</p>
-
-    <h2>Contact</h2>
-    <p>Tri Nguyen, founder · <a href="mailto:admin@tnexa.org">admin@tnexa.org</a></p>
+    <h2>About</h2>
+    <div class="table-scroll">
+    <table>
+      <tr><td class="n">Company</td><td>TNExa — a one-person software startup, not yet incorporated</td></tr>
+      <tr><td class="n">Founded</td><td>August 2026</td></tr>
+      <tr><td class="n">Founder</td><td>Tri Nguyen</td></tr>
+      <tr><td class="n">Location</td><td>Da Nang, Vietnam</td></tr>
+      <tr><td class="n">Contact</td><td><a href="mailto:admin@tnexa.org">admin@tnexa.org</a></td></tr>
+    </table>
+    </div>
   </main>
 
-  <footer>© 2026 TNExa · Vietnam</footer>
+  <footer>© 2026 TNExa · Da Nang, Vietnam</footer>
 </div>
 </body>
 </html>
