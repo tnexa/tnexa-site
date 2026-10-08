@@ -3,68 +3,164 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>TNExa — precise software with AI</title>
-<meta name="description" content="TNExa is a one-person software startup in Da Nang, Vietnam, building tools that make AI-assisted software development precise.">
+<title>TNExa — building software with AI, precisely</title>
+<meta name="description" content="TNExa is a one-person startup that builds its products with Claude. BDDtoTDD, our core tool, turns each idea into a behaviour spec, a domain model and a test structure before Claude Code writes the code.">
 <link rel="stylesheet" href="/style.css">
+<style>
+  .d-box { fill: var(--bg); stroke: var(--line); stroke-width: 1.5; }
+  .d-box.accent { fill: var(--accent); stroke: var(--accent); }
+  .d-title { fill: var(--fg); font-size: 14px; font-weight: 600; }
+  .d-sub { fill: var(--muted); font-size: 12px; }
+  .d-title.on-accent, .d-sub.on-accent { fill: #fff; }
+  .d-arrow { stroke: var(--muted); stroke-width: 1.5; fill: none; }
+  .d-head { fill: var(--muted); }
+  .d-decide { fill: var(--accent); }
+  .d-note { fill: var(--accent); font-size: 12px; font-weight: 600; }
+  .d-band { fill: none; stroke: var(--line); stroke-dasharray: 4 4; }
+  .d-label { fill: var(--muted); font-size: 11px; letter-spacing: .06em; }
+</style>
 </head>
 <body>
-<div class="wrap">
+<div class="wrap wide">
   <header>
-    <div class="logo">TN<span>Exa</span></div>
-    <a href="mailto:admin@tnexa.org">admin@tnexa.org</a>
+    <a class="logo" href="/" style="color:inherit;text-decoration:none">TN<span>Exa</span></a>
+    <nav class="top">
+      <a href="#how">How it works</a>
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a class="btn small" href="/sample-run/">Sample run</a>
+    </nav>
   </header>
 
   <main>
-    <h1>Software built with AI should do exactly what was agreed.</h1>
-    <p class="lead">TNExa is a software startup in Da Nang, Vietnam. We build tools that make AI-assisted
-      software development precise: the behaviour is agreed first, and the code an AI writes is checked
-      against it.</p>
-
-    <h2>Vision</h2>
-    <p>AI coding agents now write code faster than people can review it. The bottleneck has moved from
-      writing code to saying precisely what the code should do. A vague request gets a confident guess:
-      missing rules, unwritten edge cases, tests that arrive after the code.</p>
-    <p>We think every line an AI writes should trace back to a behaviour someone agreed to. Our tools put
-      the specification and the tests first, built with the methods software teams already trust —
-      behaviour-driven development, domain-driven design and test-driven development — and they keep a
-      person in charge of every decision.</p>
-
-    <h2>How we build</h2>
-    <p>TNExa is one founder working with Claude Code, which writes the specifications, tests and code we
-      produce. BDDtoTDD is our core tool, and every TNExa product will be built with it:
-      Claude turns the idea into a behaviour specification, a domain model and a test structure, then Claude
-      Code writes the code test-first. The founder makes the decisions; Claude does the work.</p>
-
-    <h2>Products</h2>
-    <div class="grid">
-      <div class="card">
-        <b><a href="/bddtotdd/">BDDtoTDD</a></b>
-        <p>A pipeline on Claude that takes a raw product idea to a behaviour specification, a domain model
-          and the test structure a developer or Claude Code implements test-first.</p>
-        <p style="margin-top:10px"><span class="status" style="margin:0">In design · step 1 runs on Claude</span></p>
-      </div>
-      <div class="card">
-        <b>Spec cockpit for macOS</b>
-        <p>A native macOS app that drives Claude Code from idea intake to spec authoring, with a review
-          gate at every stage. BDDtoTDD's method is going into it next.</p>
-        <p style="margin-top:10px"><span class="status" style="margin:0">Prototype · idea intake working</span></p>
+    <div class="hero">
+      <span class="eyebrow">TNExa · software built with Claude</span>
+      <h1>We build our products with AI. BDDtoTDD makes it fast and exact.</h1>
+      <p class="lead">TNExa is a one-person software startup where AI does all of the building: Claude writes every
+        specification, test and line of code. BDDtoTDD is the core tool that tells it what to write: every idea becomes a behaviour specification, a domain model and a test
+        structure first. Less time fixing what the AI guessed, more products shipped the way they were meant.</p>
+      <div class="actions">
+        <a class="btn" href="/bddtotdd/">How BDDtoTDD works</a>
+        <a class="btn ghost" href="/sample-run/">See a real sample run</a>
       </div>
     </div>
-    <p style="margin-top:16px"><a href="/sample-run/">See a sample run of BDDtoTDD's first step →</a></p>
 
-    <h2>About</h2>
-    <div class="table-scroll">
-    <table>
-      <tr><td class="n">Company</td><td>TNExa — a one-person software startup, not yet incorporated</td></tr>
-      <tr><td class="n">Founded</td><td>August 2026</td></tr>
-      <tr><td class="n">Founder</td><td>Tri Nguyen</td></tr>
-      <tr><td class="n">Location</td><td>Da Nang, Vietnam</td></tr>
-      <tr><td class="n">Contact</td><td><a href="mailto:admin@tnexa.org">admin@tnexa.org</a></td></tr>
-    </table>
+    <div class="diagram" id="how" role="img" aria-label="Pipeline: raw idea, goals and impact map, stories and examples, BDD spec and domain model, test structure, then Claude Code implements test-first. You decide at each step.">
+      <svg viewBox="0 0 960 190" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+            <path d="M0,0 L10,5 L0,10 z" class="d-head"/>
+          </marker>
+        </defs>
+        <rect x="140" y="14" width="642" height="128" rx="12" class="d-band"/>
+        <text x="152" y="32" class="d-label">BDDTOTDD · CLAUDE DOES THE WORK</text>
+
+        <rect x="8" y="58" width="112" height="58" rx="10" class="d-box"/>
+        <text x="64" y="83" text-anchor="middle" class="d-title">Raw idea</text>
+        <text x="64" y="101" text-anchor="middle" class="d-sub">one sentence</text>
+
+        <rect x="156" y="58" width="134" height="58" rx="10" class="d-box"/>
+        <text x="223" y="83" text-anchor="middle" class="d-title">Goals</text>
+        <text x="223" y="101" text-anchor="middle" class="d-sub">+ impact map</text>
+
+        <rect x="314" y="58" width="134" height="58" rx="10" class="d-box"/>
+        <text x="381" y="83" text-anchor="middle" class="d-title">Stories</text>
+        <text x="381" y="101" text-anchor="middle" class="d-sub">+ rules, examples</text>
+
+        <rect x="472" y="58" width="134" height="58" rx="10" class="d-box"/>
+        <text x="539" y="83" text-anchor="middle" class="d-title">BDD spec</text>
+        <text x="539" y="101" text-anchor="middle" class="d-sub">+ domain model</text>
+
+        <rect x="630" y="58" width="134" height="58" rx="10" class="d-box"/>
+        <text x="697" y="83" text-anchor="middle" class="d-title">Test structure</text>
+        <text x="697" y="101" text-anchor="middle" class="d-sub">tests, doubles</text>
+
+        <rect x="808" y="58" width="144" height="58" rx="10" class="d-box accent"/>
+        <text x="880" y="83" text-anchor="middle" class="d-title on-accent">Claude Code</text>
+        <text x="880" y="101" text-anchor="middle" class="d-sub on-accent">implements test-first</text>
+
+        <path d="M120,87 L152,87" class="d-arrow" marker-end="url(#ah)"/>
+        <path d="M290,87 L310,87" class="d-arrow" marker-end="url(#ah)"/>
+        <path d="M448,87 L468,87" class="d-arrow" marker-end="url(#ah)"/>
+        <path d="M606,87 L626,87" class="d-arrow" marker-end="url(#ah)"/>
+        <path d="M764,87 L804,87" class="d-arrow" marker-end="url(#ah)"/>
+
+        <g>
+          <circle cx="223" cy="166" r="5" class="d-decide"/><path d="M223,116 L223,160" class="d-arrow" stroke-dasharray="3 3"/>
+          <circle cx="381" cy="166" r="5" class="d-decide"/><path d="M381,116 L381,160" class="d-arrow" stroke-dasharray="3 3"/>
+          <circle cx="539" cy="166" r="5" class="d-decide"/><path d="M539,116 L539,160" class="d-arrow" stroke-dasharray="3 3"/>
+          <circle cx="697" cy="166" r="5" class="d-decide"/><path d="M697,116 L697,160" class="d-arrow" stroke-dasharray="3 3"/>
+          <text x="712" y="170" class="d-note">the founder decides at every step</text>
+        </g>
+      </svg>
     </div>
+
+    <section>
+      <div class="two">
+        <div>
+          <h3>The problem</h3>
+          <p>A solo founder with an AI agent can build fast, but speed is not the hard part. Ask for a feature
+            and the agent ships one, confidently: unstated rules are guessed, unnamed edge cases are missing,
+            and the tests arrive after the code. The time saved writing is lost fixing. Spec generators do not
+            help: pages of text nobody reads.</p>
+        </div>
+        <div>
+          <h3>How BDDtoTDD fixes it</h3>
+          <p>Before Claude Code writes anything, BDDtoTDD asks the questions a product team would ask, one step
+            at a time, using methods teams already trust: impact mapping, example mapping, behaviour-driven
+            development, use cases and domain-driven design. A spec only holds what a question earned, so it
+            stays short, and the tests define done.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>What comes out of step 1</h2>
+      <p class="section-lead">A real run on a real idea. Claude asked why until it reached the pain underneath,
+        challenged its own list, and returned candidate goals with a plain test for success.</p>
+      <div class="preview" style="margin-top:20px">
+        <div class="tag">Sample run · 2026-08-14 · 3 of 8 goals</div>
+        <div class="goal"><b>A green suite that only covers lines of code</b><span>Success means every behaviour and edge case in the spec has a test pointing at it.</span></div>
+        <div class="goal"><b>Starting TDD means inventing the next test yourself</b><span>Success means the order of the tests reads straight off the spec.</span></div>
+        <div class="goal"><b>Spec in one place, tests in another</b><span>Success means editing a spec item tells you which test must change.</span></div>
+      </div>
+      <p style="margin-top:14px"><a href="/sample-run/">Read the whole run →</a></p>
+    </section>
+
+    <section id="products">
+      <h2>Products</h2>
+      <div class="grid">
+        <div class="card">
+          <b><a href="/bddtotdd/">BDDtoTDD</a></b>
+          <p>Our core tool: nine steps from a raw idea to the test structure Claude Code implements. Every TNExa
+            product will go through it.</p>
+          <div class="meta">In design · step 1 runs on Claude</div>
+        </div>
+        <div class="card">
+          <b>Spec cockpit for macOS</b>
+          <p>A native app that drives Claude Code through each stage, with a review gate before the next one
+            starts. BDDtoTDD's method goes into it next.</p>
+          <div class="meta">Prototype · idea intake working</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About TNExa</h2>
+      <p class="section-lead">TNExa is a one-person software startup in Da Nang, Vietnam, founded in August 2026
+        by Tri Nguyen, an Apple-platform software engineer. It is not yet incorporated. Nothing is written by hand:
+        Claude produces 100% of the specifications, tests and code, and the founder makes 100% of the decisions.</p>
+      <p class="section-lead">Contact: <a href="mailto:admin@tnexa.org">admin@tnexa.org</a></p>
+    </section>
+
   </main>
 
-  <footer>© 2026 TNExa · Da Nang, Vietnam</footer>
+  <footer>
+    <div class="cols">
+      <span>© 2026 TNExa · Da Nang, Vietnam</span>
+      <span><a href="/bddtotdd/">BDDtoTDD</a><a href="/sample-run/">Sample run</a><a href="mailto:admin@tnexa.org">admin@tnexa.org</a></span>
+    </div>
+  </footer>
 </div>
 </body>
 </html>

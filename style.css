@@ -47,3 +47,49 @@ blockquote { margin: 16px 0; padding: 12px 16px; border-left: 3px solid var(--ac
 .ladder { list-style: none; padding: 0; margin: 16px 0; }
 .ladder li { padding: 8px 0 8px 14px; border-left: 2px solid var(--line); }
 .ladder li:last-child { border-left-color: var(--accent); font-weight: 600; }
+
+/* Site chrome */
+.wrap.wide { max-width: 1040px; }
+nav.top { display: flex; gap: 22px; align-items: center; }
+nav.top a { color: var(--muted); text-decoration: none; font-size: 15px; }
+nav.top a:hover { color: var(--fg); }
+nav.top a.btn { color: #fff; }
+.btn {
+  display: inline-block; padding: 11px 18px; border-radius: 8px; font-weight: 600; font-size: 15px;
+  text-decoration: none; background: var(--accent); color: #fff; border: 1px solid var(--accent);
+}
+.btn.ghost { background: transparent; color: var(--fg); border-color: var(--line); }
+.btn.small { padding: 7px 12px; font-size: 14px; }
+.actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 26px; }
+.hero { padding: 40px 0 8px; }
+.hero h1 { max-width: 15em; margin-top: 18px; }
+.eyebrow { font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
+section { margin-top: 88px; }
+section > h2 { margin-top: 0; }
+.section-lead { color: var(--muted); max-width: 40em; }
+.diagram { margin: 34px 0 0; padding: 22px; background: var(--card); border: 1px solid var(--line); border-radius: 14px; overflow-x: auto; }
+.diagram svg { display: block; min-width: 760px; width: 100%; height: auto; }
+.diagram text { font-family: inherit; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+.two h3 { font-size: 17px; margin: 0 0 8px; }
+.two p { color: var(--muted); font-size: 16px; }
+.preview { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px; }
+.preview .tag { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+.preview .goal { padding: 12px 0; border-top: 1px solid var(--line); }
+.preview .goal:first-of-type { border-top: 0; }
+.preview .goal b { display: block; font-size: 15px; }
+.preview .goal span { color: var(--muted); font-size: 14px; }
+.card .meta { margin-top: 12px; font-size: 13px; color: var(--accent); font-weight: 600; }
+.cta-band {
+  margin-top: 96px; padding: 34px; border-radius: 16px; background: var(--card); border: 1px solid var(--line);
+  display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap;
+}
+.cta-band h2 { margin: 0 0 6px; }
+.cta-band p { margin: 0; color: var(--muted); }
+footer .cols { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+footer a { color: var(--muted); margin-left: 16px; text-decoration: none; }
+@media (max-width: 720px) {
+  .two { grid-template-columns: 1fr; }
+  nav.top a:not(.btn) { display: none; }
+  section { margin-top: 64px; }
+}
