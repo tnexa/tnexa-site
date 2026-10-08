@@ -38,8 +38,8 @@
       <h1>We build software products with AI.</h1>
       <p class="lead">TNExa is a one-person software startup building mobile apps, starting with Apple platforms. AI
         produces 100% of our specifications, tests and
-        code; the founder makes every decision. Our own tooling keeps that work precise, so what ships is
-        what was meant.</p>
+        code; the founder makes every decision. This is not vibe coding: every product goes through a
+        defined process, from agreed behaviour to tests to code, so what ships is what was meant.</p>
       <div class="actions">
         <a class="btn" href="#products">Our products</a>
         <a class="btn ghost" href="#how">How we work</a>
@@ -115,6 +115,23 @@
           <p>An internal macOS app drives Claude Code through each stage, with a review gate before the next one
             starts. Idea intake already works; the BDDtoTDD method goes into it next.</p>
         </div>
+      </div>
+    </section>
+
+    <section id="process">
+      <h2>Not vibe coding</h2>
+      <p class="section-lead">Prompting an agent until the demo works is fast, and it is how most AI-built software
+        is made today. We use the same AI with a process around it.</p>
+      <div class="table-scroll">
+      <table>
+        <tr><th></th><th>Vibe coding</th><th>How TNExa builds</th></tr>
+        <tr><td class="n">Starts from</td><td>A prompt</td><td>An agreed behaviour specification</td></tr>
+        <tr><td class="n">Edge cases</td><td>Guessed by the model</td><td>Named as concrete examples before any code</td></tr>
+        <tr><td class="n">Tests</td><td>Written after the code, if at all</td><td>Written first; they define done</td></tr>
+        <tr><td class="n">Scope</td><td>Whatever the agent produced</td><td>Only what a question in the spec earned</td></tr>
+        <tr><td class="n">Review</td><td>Read the diff and hope</td><td>Each step checked against the spec, then approved</td></tr>
+        <tr><td class="n">Result</td><td>Works in the demo</td><td>Does what was agreed, and the tests show it</td></tr>
+      </table>
       </div>
     </section>
 
